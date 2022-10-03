@@ -4,10 +4,10 @@ import Hero from "./components/Hero/Hero";
 
 function App() {
   return (
-    <>
+    <div className="font-body">
       <NavBar />
       <Hero />
-    </>
+    </div>
   );
 }
 

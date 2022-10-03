@@ -20,7 +20,7 @@ export const PC = ({ showMenu }) => {
           color='primary'
         />
       </div>
-      <ul className='hidden md:flex items-center justify-between md:gap-4 lg:gap-12 font-semibold font-body'>
+      <ul className='hidden md:flex items-center justify-between md:gap-4 lg:gap-12 font-semibold'>
         <li>
           <a href='/'>Home</a>
         </li>

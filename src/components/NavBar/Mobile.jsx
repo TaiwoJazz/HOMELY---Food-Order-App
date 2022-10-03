@@ -10,7 +10,7 @@ const Mobile = ({ showMenu, active }) => {
           : 'hidden'
       }
     >
-      <div className='flex flex-col gap-12 h-screen min-w-[22rem] justify-center bg-brandColor/70 backdrop-blur-3xl absolute right-0'>
+      <div className='flex flex-col gap-12 h-screen w-5/6 justify-center bg-brandColor/70 backdrop-blur-3xl absolute right-0'>
         <CloseIcon
           onClick={showMenu}
           sx={{ fontSize: 40 }}
