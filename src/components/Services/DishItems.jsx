@@ -1,9 +1,9 @@
-import yam from '../../img/yam-egg.webp'
-import jollof from '../../img/jollof-rice.webp'
-import porridge from '../../img/porridge-beans.webp'
-import semo from '../../img/semo-egusi.webp'
-import amala from '../../img/amala-ewedu.webp'
-import eba from '../../img/eba-okro.webp'
+import yam from '../../assets/yam-egg.webp'
+import jollof from '../../assets/jollof-rice.webp'
+import porridge from '../../assets/porridge-beans.webp'
+import semo from '../../assets/semo-egusi.webp'
+import amala from '../../assets/amala-ewedu.webp'
+import eba from '../../assets/eba-okro.webp'
 
 const dishItems = [
   {

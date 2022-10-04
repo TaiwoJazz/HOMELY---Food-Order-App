@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Stats from './Stats';
 import Button from '../UI/Button';
-import heroImage from '../../img/hero-image.png';
+import heroImage from '../../assets/hero-image.png';
 
 const Hero = () => {
   return (

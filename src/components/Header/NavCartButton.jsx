@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../UI/Button';
-import carticon from '../../img/carticon.svg';
+import carticon from '../../assets/carticon.svg';
 
 const NavCartButton = () => {
   return (

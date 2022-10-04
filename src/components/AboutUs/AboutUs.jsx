@@ -1,7 +1,7 @@
 import React from 'react';
-import order from '../../img/order.png';
-import delivery from '../../img/delivery-man.png';
-import food from '../../img/food.png';
+import order from '../../assets/order.png';
+import delivery from '../../assets/delivery-man.png';
+import food from '../../assets/food.png';
 
 const aboutUsData = [
   {

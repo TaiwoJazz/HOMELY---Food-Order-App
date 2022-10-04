@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import NavCartButton from './NavCartButton';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import Button from '../UI/Button';
-import carticon from '../../img/carticon.svg';
+import carticon from '../../assets/carticon.svg';
 import NavLink from '../UI/NavLink';
 
 export const PC = props => {
