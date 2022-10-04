@@ -8,9 +8,9 @@ export const PC = ({ showMenu }) => {
   return (
     <Fragment>
       <div className='md:hidden flex gap-2 items-center cursor-pointer'>
-        <Button className='mx-1'>
-          <img src={carticon} alt='carticon' className='inline-block mr-2' />
-          <span className='ml-1 py-1 px-2.5 text-black bg-white rounded-full'>
+        <Button className='p-6'>
+          <img src={carticon} alt='carticon' className='inline-block mr-2 w-3' />
+          <span className='ml-1 py-1 px-2 text-xs text-black bg-white rounded-full'>
             4
           </span>
         </Button>
@@ -20,7 +20,7 @@ export const PC = ({ showMenu }) => {
           color='primary'
         />
       </div>
-      <ul className='hidden md:flex items-center justify-between md:gap-4 lg:gap-12 font-semibold'>
+      <ul className='hidden md:flex items-center justify-between md:gap-8 xl:gap-12 font-semibold text-base md:text-sm lg:text-base'>
         <li>
           <a href='/'>Home</a>
         </li>
