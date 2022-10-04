@@ -26,7 +26,7 @@ const aboutUsData = [
 
 const AboutUs = () => {
   return (
-    <div className='my-28 px-4 md:px-0'>
+    <div className='my-28 px-4 md:px-0' id='AboutUs'>
       <div
         className='text-center mb-12'
         data-aos='fade-up'

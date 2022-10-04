@@ -1,18 +1,18 @@
 import React from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 
-const Mobile = ({ showMenu, active }) => {
+const Mobile = props => {
   return (
     <div
       className={
-        active
+        props.active
           ? 'md:hidden flex flex-col items-center justify-center gap-16 fixed inset-0 text-xl text-center text-white'
           : 'hidden'
       }
     >
       <div className='flex flex-col gap-12 h-screen w-5/6 justify-center bg-brandColor/70 backdrop-blur-3xl absolute right-0'>
         <CloseIcon
-          onClick={showMenu}
+          onClick={props.showMenu}
           sx={{ fontSize: 40 }}
           className='absolute cursor-pointer top-12 right-4'
         />
@@ -21,10 +21,10 @@ const Mobile = ({ showMenu, active }) => {
             <a href='/'>Home</a>
           </li>
           <li>
-            <a href='/'>About Us</a>
+            <a href='#AboutUs'>About Us</a>
           </li>
           <li>
-            <a href='/'>Our Products</a>
+            <a href='/'>Services</a>
           </li>
           <li>
             <a href='/'>Testimonials</a>
