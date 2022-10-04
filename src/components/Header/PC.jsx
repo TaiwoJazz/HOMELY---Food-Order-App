@@ -27,10 +27,10 @@ export const PC = props => {
       </div>
       <ul className='hidden md:flex items-center justify-between md:gap-8 xl:gap-12 font-semibold text-base md:text-sm lg:text-base'>
         <NavLink href="/">Home</NavLink>
-        <NavLink href="#AboutUs">About Us</NavLink>
-        <NavLink href="/">Services</NavLink>
+        <NavLink href="#WhyChooseUs">Why Choose Us</NavLink>
+        <NavLink href="/">Our Dishes</NavLink>
+        <NavLink href="/">About Us</NavLink>
         <NavLink href="/">Testimonials</NavLink>
-        <NavLink href="/">Contact Us</NavLink>
         <NavCartButton />
       </ul>
     </Fragment>

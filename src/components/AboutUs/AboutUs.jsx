@@ -1,65 +1,36 @@
 import React from 'react';
-import order from '../../assets/order.png';
-import delivery from '../../assets/delivery-man.png';
-import food from '../../assets/food.png';
-
-const aboutUsData = [
-  {
-    tag: 'Easy to Order',
-    icon: order,
-    description:
-      'Order food at a single click and select all food to order at any poin in time and at ease and comfort'
-  },
-  {
-    tag: 'Fast Delivery',
-    icon: delivery,
-    description:
-      'Food delivery fast and reliable and get delivered at deliivery tinme and location any day any time'
-  },
-  {
-    tag: '100% Quality',
-    icon: food,
-    description:
-      'We provide quality food for you and your loved ones for health and so onnnnnn and for wellness'
-  }
-];
+import GetOurMobile from './GetOurMobile';
+import Button from '../UI/Button';
+import aboutus from '../../assets/aboutus.png';
 
 const AboutUs = () => {
   return (
-    <div className='my-28 px-4 md:px-0' id='AboutUs'>
+    <>
+    <div className='flex flex-col lg:flex-row items-center justify-between w-[400px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mb-32 mt-44'>
       <div
-        className='text-center mb-12'
-        data-aos='fade-up'
+        className='text-center lg:text-left mb-16 lg:mb-0'
+        data-aos='fade-right'
         data-aos-easing='ease-in'
       >
-        <h1 className='text-4xl font-semibold text-brandColor'>
-          Why choose us
-        </h1>
-        <p className='text-2xl mt-4'>
-          This is what makes our product different
+        <h1 className='text-4xl font-semibold text-brandColor'>About Us</h1>
+        <p className='text-2xl my-6 max-w-lg leading-normal'>
+          I make delicious healthy meals for busy people who want to enjoy home
+          made food without the hassle of cooking. Why would you cook when you
+          don't have to? The Hot Plate makes it easy to eat your favorite home
+          cooked food anywhere you want. You deserve to eat great food, whether
+          you're at home or on the go.
         </p>
+        <Button>See More</Button>
       </div>
-      <div
-        className='flex flex-col lg:flex-row gap-8 bg-backgroundLight w-[400px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto'
-        data-aos='fade-up'
+      <img
+        src={aboutus}
+        alt='about us'
+        data-aos='fade-left'
         data-aos-easing='ease-in'
-        data-aos-duration='500'
-      >
-        {aboutUsData.map((items, index) => (
-          <div
-            key={index}
-            className='flex flex-col items-center gap-6 bg-white my-12 p-12 lg:w-[385px] md:w-[700px] rounded-xl'
-            data-aos='zoom-in'
-            data-aos-easing='ease-in'
-            data-aos-duration='400'
-          >
-            <img className='w-28 my-6' src={items.icon} alt='' />
-            <h2 className='text-3xl font-semibold'>{items.tag}</h2>
-            <p className='text-center text-[19px]'>{items.description}</p>
-          </div>
-        ))}
-      </div>
+      />
     </div>
+    <GetOurMobile />
+    </>
   );
 };
 

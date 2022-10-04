@@ -21,16 +21,16 @@ const Mobile = props => {
             <a href='/'>Home</a>
           </li>
           <li>
-            <a href='#AboutUs'>About Us</a>
+            <a href='#AboutUs'>Why Choose Us</a>
           </li>
           <li>
-            <a href='/'>Services</a>
+            <a href='/'>Our Dishes</a>
+          </li>
+          <li>
+            <a href='/'>About Us</a>
           </li>
           <li>
             <a href='/'>Testimonials</a>
-          </li>
-          <li>
-            <a href='/'>Contact Us</a>
           </li>
         </ul>
       </div>

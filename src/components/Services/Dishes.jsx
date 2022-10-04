@@ -1,7 +1,7 @@
 import React from 'react';
 import dishItems from './DishItems';
 import Button from '../UI/Button';
-// import PlusSign from '../../img/plus.png'
+import PlusSign from '../../assets/plus.png';
 
 const Dishes = () => {
   return (
@@ -21,7 +21,7 @@ const Dishes = () => {
       <div className='grid grid-cols-1 md:grid-col-2 lg:grid-cols-3 gap-16 w-[400px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto '>
         {dishItems.map(dishes => (
           <div
-            className='bg-white px-12 py-6 lg:w-[350px] md:w-[600px] rounded-xl drop-shadow-lg'
+            className='bg-white px-12 py-6 lg:w-[350px] md:w-[600px] rounded-xl drop-shadow-lg mx-auto'
             data-aos='fade-up'
             data-aos-easing='ease-in'
           >
@@ -30,8 +30,14 @@ const Dishes = () => {
               {dishes.title}
             </h4>
             <span className='flex items-center justify-between'>
-              <p className='text-xl inline-block font-semibold'>₦ {dishes.amount}</p>
-              <Button>&nbsp; + &nbsp; Add &nbsp;</Button>
+              <p className='text-xl inline-block font-semibold'>
+                ₦ {dishes.amount}
+              </p>
+              <Button>
+                &nbsp;{' '}
+                <img className='inline-block mb-1' src={PlusSign} alt='' />{' '}
+                &nbsp; Add &nbsp;
+              </Button>
             </span>
           </div>
         ))}
