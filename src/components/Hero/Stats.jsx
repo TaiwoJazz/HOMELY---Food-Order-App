@@ -6,6 +6,7 @@ const Stats = () => {
       className='flex flex-col md:flex-row text-center items-center justify-center gap-12 md:gap-24 lg:gap-48 my-24'
       data-aos='fade-up'
       data-aos-easing='ease-in'
+      data-aos-duration='400'
     >
       <div>
         <h1 className='text-5xl font-bold mb-4 text-textBold'>500+</h1>

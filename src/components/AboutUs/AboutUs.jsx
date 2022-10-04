@@ -48,9 +48,10 @@ const AboutUs = () => {
         {aboutUsData.map((items, index) => (
           <div
             key={index}
-            className='flex flex-col items-center gap-6  bg-white my-12 p-12 lg:w-[385px] md:w-[700px] rounded-xl'
+            className='flex flex-col items-center gap-6 bg-white my-12 p-12 lg:w-[385px] md:w-[700px] rounded-xl'
             data-aos='zoom-in'
             data-aos-easing='ease-in'
+            data-aos-duration='400'
           >
             <img className='w-28 my-6' src={items.icon} alt='' />
             <h2 className='text-3xl font-semibold'>{items.tag}</h2>
