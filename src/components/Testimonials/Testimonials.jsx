@@ -16,7 +16,7 @@ import NewsLetter from './NewsLetter';
 const Testimonials = () => {
   return (
     <>
-      <div className='w-[330px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mb-32'>
+      <div className='w-[320px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mb-32'>
         <div className='text-center mb-8'>
           <h1 className='text-4xl font-semibold text-brandColor'>
             Testimonials
