@@ -6,7 +6,7 @@ import facebook from '../../assets/facebook.png';
 
 const Footer = () => {
   return (
-    <div className='bg-backgroundFooter'>
+    <div className='bg-backgroundFooter px-4 md:px-0'>
       <div className='flex flex-col-reverse lg:flex-row gap-12 lg:gap-0 items-center lg:items-start justify-between text-white md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto py-12 text-center lg:text-left'>
         <div>
           <Logo />
@@ -14,7 +14,9 @@ const Footer = () => {
             Solution for easy and flexible house hunting. You can trust us
             anywhere through this platform
           </p>
-          <span className='text-xl'>Made with ❤️ by <span className='cursor-pointer'>Taiwo Jazz</span></span>
+          <span className='text-xl'>
+            Made with ❤️ by <span className='cursor-pointer'>Taiwo Jazz</span>
+          </span>
           <span className='block mt-4 text-2xl'>&copy;2022</span>
         </div>
         <div>

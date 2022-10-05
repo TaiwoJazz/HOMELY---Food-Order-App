@@ -40,7 +40,7 @@ const WhyChooseUs = () => {
         </p>
       </div>
       <div
-        className='flex flex-col items-center lg:flex-row gap-8 bg-backgroundLight w-[400px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto'
+        className='flex flex-col items-center lg:flex-row gap-8 bg-backgroundLight w-[290px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto'
         data-aos='fade-up'
         data-aos-easing='ease-in'
         data-aos-duration='500'
@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
         {aboutUsData.map((items, index) => (
           <div
             key={index}
-            className='flex flex-col items-center just gap-6 bg-white my-12 p-12 lg:w-[385px] md:w-[700px] rounded-xl'
+            className='flex flex-col items-center just gap-6 bg-white my-12 p-12 lg:w-[385px] md:w-[700px] rounded-xl text-center'
             data-aos='zoom-in'
             data-aos-easing='ease-in'
             data-aos-duration='400'

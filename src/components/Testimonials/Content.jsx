@@ -38,7 +38,7 @@ const Content = [
     content:
       'This is the very best food order app i have seen in recent time, there food is so delicious and there delivery is so on point. Very fast and reliable, buy there food and you will be glad you did.',
     image: emmanual,
-    name: 'Emmanuel Tobby',
+    name: 'Emma Tobby',
     location: 'Abuja',
     rating: '⭐⭐⭐⭐⭐'
   },
