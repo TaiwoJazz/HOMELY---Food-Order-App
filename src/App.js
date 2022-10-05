@@ -16,8 +16,8 @@ function App() {
       <WhyChooseUs />
       <Dishes />
       <AboutUs />
-      {/* <GetOurMobile />
-      <Testimonials /> */}
+      <GetOurMobile />
+      <Testimonials />
       <Footer />
     </div>
   );
