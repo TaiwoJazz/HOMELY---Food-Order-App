@@ -6,7 +6,7 @@ import heroImage from '../../assets/hero-image.png';
 const Hero = () => {
   return (
     <Fragment>
-      <div className='flex flex-col lg:flex-row items-center text-center lg:text-left gap-8 md:gap-24 lg:gap-8 xl:gap-32 px-4 md:px-0 md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mt-28 lg:mt-52'>
+      <div className='flex flex-col lg:flex-row items-center text-center lg:text-left gap-8 md:gap-24 lg:gap-8 xl:gap-32 px-6 md:px-0 md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mt-28 lg:mt-52'>
         <div
           data-aos='fade-right'
           data-aos-easing='ease-in'

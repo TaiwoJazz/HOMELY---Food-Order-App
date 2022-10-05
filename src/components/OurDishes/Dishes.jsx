@@ -5,7 +5,7 @@ import PlusSign from '../../assets/plus.png';
 
 const Dishes = () => {
   return (
-    <div className='mb-24 px-4 md:px-0 w-[290px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto'>
+    <div className='mb-24 px-6 md:px-0 md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto'>
       <div
         className='text-center mb-12'
         data-aos='fade-up'
@@ -21,8 +21,8 @@ const Dishes = () => {
       <div className='grid grid-cols-1 md:grid-col-2 lg:grid-cols-3 gap-16'>
         {dishItems.map(dishes => (
           <div
-          key={dishes.id}
-            className='bg-white px-4 md:px-12 py-6 lg:w-[350px] md:w-[600px] rounded-xl drop-shadow-lg mx-auto cursor-pointer'
+            key={dishes.id}
+            className='bg-white px-4 md:px-12 py-6  lg:w-[350px] md:w-[600px] rounded-xl drop-shadow-lg mx-auto cursor-pointer'
             data-aos='fade-up'
             data-aos-easing='ease-in'
           >

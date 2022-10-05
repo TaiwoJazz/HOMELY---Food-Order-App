@@ -3,7 +3,7 @@ import Button from '../UI/Button';
 
 const NewsLetter = () => {
   return (
-    <div className='text-center mb-24 px-4 md:px-0'>
+    <div className='text-center mb-24 px-6 md:px-0'>
       <h1 className='text-4xl font-semibold text-brandColor'>
         Subscribe to our Newsletter
       </h1>

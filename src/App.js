@@ -11,13 +11,13 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <div className="font-body scroll-smooth">
-      <NavBar />
+       <NavBar />
       <Hero />
       <WhyChooseUs />
       <Dishes />
       <AboutUs />
       <GetOurMobile />
-      <Testimonials />
+      <Testimonials /> 
       <Footer />
     </div>
   );

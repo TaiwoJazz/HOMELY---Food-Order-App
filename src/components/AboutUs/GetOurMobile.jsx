@@ -11,7 +11,7 @@ const GetOurMobile = () => {
       </h1>
       <p className='text-2xl mt-2'>Enjoy better experience</p>
       <div
-        className='flex flex-col-reverse lg:flex-row items-start justify-around w-[290px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mb-32 lg:mt-12'
+        className='flex flex-col-reverse lg:flex-row items-start justify-around px-6 md:px-0 md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mb-32 lg:mt-12'
         data-aos='fade-up'
         data-aos-easing='ease-in'
       >
