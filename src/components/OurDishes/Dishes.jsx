@@ -21,7 +21,8 @@ const Dishes = () => {
       <div className='grid grid-cols-1 md:grid-col-2 lg:grid-cols-3 gap-16'>
         {dishItems.map(dishes => (
           <div
-            className='bg-white px-12 py-6 lg:w-[350px] md:w-[600px] rounded-xl drop-shadow-lg mx-auto cursor-pointer'
+          key={dishes.id}
+            className='bg-white px-4 md:px-12 py-6 lg:w-[350px] md:w-[600px] rounded-xl drop-shadow-lg mx-auto cursor-pointer'
             data-aos='fade-up'
             data-aos-easing='ease-in'
           >
@@ -31,11 +32,10 @@ const Dishes = () => {
             </h4>
             <span className='flex items-center justify-between'>
               <p className='text-xl inline-block font-semibold'>
-                ₦ {dishes.amount}
+                ₦{dishes.amount}
               </p>
               <Button>
-                &nbsp;{' '}
-                <img className='inline-block mb-1' src={PlusSign} alt='' />{' '}
+                <img className='inline-block mb-1' src={PlusSign} alt='' />
                 &nbsp; Add &nbsp;
               </Button>
             </span>
