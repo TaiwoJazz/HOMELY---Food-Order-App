@@ -21,7 +21,7 @@ const Dishes = () => {
       <div className='grid grid-cols-1 md:grid-col-2 lg:grid-cols-3 gap-16 w-[400px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto '>
         {dishItems.map(dishes => (
           <div
-            className='bg-white px-12 py-6 lg:w-[350px] md:w-[600px] rounded-xl drop-shadow-lg mx-auto'
+            className='bg-white px-12 py-6 lg:w-[350px] md:w-[600px] rounded-xl drop-shadow-lg mx-auto cursor-pointer'
             data-aos='fade-up'
             data-aos-easing='ease-in'
           >

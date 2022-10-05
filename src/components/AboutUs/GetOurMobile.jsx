@@ -6,7 +6,7 @@ import applestore from '../../assets/apple-store.png';
 const GetOurMobile = () => {
   return (
     <div className='text-center'>
-    <h1 className='text-4xl font-semibold text-brandColor'>About Us</h1>
+    <h1 className='text-4xl font-semibold text-brandColor'>Get Our Mobile App</h1>
     <p className='text-2xl mt-2'>Enjoy better experience</p>
     <div className='flex flex-col-reverse lg:flex-row items-start justify-around w-[400px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mb-32 mt-12'>
       <img

@@ -8,6 +8,7 @@ module.exports = {
         background: 'rgba(255, 77, 0, 0.6)',
         backgroundMedium: '#FFE9E0',
         backgroundLight: 'rgba(255, 233, 224, 0.6)',
+        backgroundFooter: 'rgba(255, 77, 0, 0.6)',
         textLight: 'rgba(0, 0, 0, 0.81)',
         textLight2: 'rgba(149, 145, 144, 1)',
         textBold: 'rgba(0, 0, 0, 1)',
