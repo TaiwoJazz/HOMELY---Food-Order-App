@@ -6,12 +6,13 @@ import heroImage from '../../assets/hero-image.png';
 const Hero = () => {
   return (
     <Fragment>
-      <div className='flex flex-col lg:flex-row items-center text-center lg:text-left gap-8 md:gap-24 lg:gap-8 xl:gap-32 px-6 md:px-0 md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mt-28 lg:mt-52'>
-        <div
-          data-aos='fade-right'
-          data-aos-easing='ease-in'
-          data-aos-duration='2000'
-        >
+      <div
+        className='flex flex-col lg:flex-row items-center text-center lg:text-left gap-8 md:gap-24 lg:gap-8 xl:gap-32 px-6 md:px-0 md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mt-28 lg:mt-52'
+        data-aos='fade-up'
+        data-aos-easing='ease-in'
+        data-aos-duration='2000'
+      >
+        <div>
           <h1 className='text-5xl font-semibold leading-snug'>
             Enjoy <span className='text-brandColor'>home made meals</span> far
             away from home
@@ -25,9 +26,9 @@ const Hero = () => {
         <img
           src={heroImage}
           alt='hero'
-          data-aos='fade-left'
-          data-aos-easing='ease-in'
-          data-aos-duration='2000'
+          // data-aos='fade-left'
+          // data-aos-easing='ease-in'
+          // data-aos-duration='2000'
         />
       </div>
       <Stats />
