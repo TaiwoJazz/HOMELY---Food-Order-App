@@ -5,7 +5,7 @@ import PlusSign from '../../assets/plus.png';
 
 const Dishes = () => {
   return (
-    <div className='mb-24 px-4 md:px-0'>
+    <div className='mb-24 px-4 md:px-0 w-[290px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto'>
       <div
         className='text-center mb-12'
         data-aos='fade-up'
@@ -18,7 +18,7 @@ const Dishes = () => {
           Check out recomended dishes of your choice
         </p>
       </div>
-      <div className='grid grid-cols-1 md:grid-col-2 lg:grid-cols-3 gap-16 w-[290px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto '>
+      <div className='grid grid-cols-1 md:grid-col-2 lg:grid-cols-3 gap-16'>
         {dishItems.map(dishes => (
           <div
             className='bg-white px-12 py-6 lg:w-[350px] md:w-[600px] rounded-xl drop-shadow-lg mx-auto cursor-pointer'

@@ -10,7 +10,7 @@ const GetOurMobile = () => {
     <p className='text-2xl mt-2'>Enjoy better experience</p>
     <div className='flex flex-col-reverse lg:flex-row items-start justify-around w-[290px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mb-32 mt-12'>
       <img
-      className='lg:-ml-24'
+      className='lg:-ml-24 w-64 md:w-96'
         src={mobileapps}
         alt='about us'
         data-aos='fade-right'

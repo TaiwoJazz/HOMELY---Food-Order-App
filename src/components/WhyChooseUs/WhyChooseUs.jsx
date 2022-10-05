@@ -26,7 +26,7 @@ const aboutUsData = [
 
 const WhyChooseUs = () => {
   return (
-    <div className='my-28 px-4 md:px-0' id='AboutUs'>
+    <div className='my-28 px-4 md:px-0 w-[290px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto' id='AboutUs'>
       <div
         className='text-center mb-12'
         data-aos='fade-up'
@@ -40,7 +40,7 @@ const WhyChooseUs = () => {
         </p>
       </div>
       <div
-        className='flex flex-col items-center lg:flex-row gap-8 bg-backgroundLight w-[290px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto'
+        className='flex flex-col items-center lg:flex-row gap-8 bg-backgroundLight'
         data-aos='fade-up'
         data-aos-easing='ease-in'
         data-aos-duration='500'
