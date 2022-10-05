@@ -1,5 +1,4 @@
 import React from 'react';
-import GetOurMobile from './GetOurMobile';
 import Button from '../UI/Button';
 import aboutus from '../../assets/aboutus.png';
 
