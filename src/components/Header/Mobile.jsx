@@ -35,8 +35,7 @@ const Mobile = props => {
               offset={-100}
               duration={500}
             >
-              <a
-                
+              <a onClick={props.showMenu}
                 className='relative block duration-500 w-fit mx-auto after:absolute after:content-[""] after:w-full after:h-0.5 after:top-full after:left-0 after:bg-brandColor after:transition after:duration-500 after:scale-0 after:origin-right hover:after:origin-left after:hover:scale-100 hover:text-brandColor'
                 href='/'
               >
