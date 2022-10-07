@@ -48,7 +48,10 @@ let testimonialContent = Content.map(testimonial => (
 const Testimonials = () => {
   return (
     <Fragment>
-      <div id='testimonials' className='px-2 md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mb-32'>
+      <div
+        id='testimonials'
+        className='px-2 md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mb-32'
+      >
         <Heading />
         <Swiper
           // swiper configuration
@@ -67,7 +70,8 @@ const Testimonials = () => {
           style={{
             height: '33rem',
             padding: '3rem 3rem',
-            color: 'black'
+            '--swiper-navigation-color': 'rgba(255, 77, 0, 1)',
+            '--swiper-pagination-color': 'rgba(255, 77, 0, 1)'
           }}
           breakpoints={{
             // swiper media query

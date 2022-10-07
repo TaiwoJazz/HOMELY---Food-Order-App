@@ -10,9 +10,14 @@ const Brand = () => {
         Solution for easy and flexible house hunting. You can trust us anywhere
         through this platform
       </p>
-      <span className='text-xl'>
+      <a
+        className='text-xl'
+        href='https://github.com/TaiwoJazz'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
         Made with ❤️ by <span className='cursor-pointer'>Taiwo Jazz</span>
-      </span>
+      </a>
       <span className='block mt-4 text-2xl'>&copy;2022</span>
     </div>
   );
