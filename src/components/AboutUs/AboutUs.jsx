@@ -5,7 +5,7 @@ import aboutus from '../../assets/aboutus.png';
 const AboutUs = () => {
   return (
     <>
-      <div
+      <div id='about'
         className='flex flex-col lg:flex-row items-center justify-between md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto mb-32 mt-44 px-6 md:px-0'
         data-aos='fade-up'
         data-aos-easing='ease-in'
@@ -22,11 +22,9 @@ const AboutUs = () => {
           <Button>See More</Button>
         </div>
         <img
-          className='w-64 md:w-96'
+          className='w-64 sm:w-96'
           src={aboutus}
           alt='about us'
-          // data-aos='fade-left'
-          // data-aos-easing='ease-in'
         />
       </div>
     </>

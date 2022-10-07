@@ -26,7 +26,7 @@ const aboutUsData = [
 
 const WhyChooseUs = () => {
   return (
-    <div className='my-28 px-6 md:px-0 md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto' id='AboutUs'>
+    <div id='why' className='my-28 px-6 md:px-0 md:w-[700px] lg:w-[1000px] xl:w-[1200px] mx-auto'>
       <div
         className='text-center mb-12'
         data-aos='fade-up'
@@ -59,6 +59,9 @@ const WhyChooseUs = () => {
           </div>
         ))}
       </div>
+      <div className='md:hidden'>
+      </div>
+      
     </div>
   );
 };

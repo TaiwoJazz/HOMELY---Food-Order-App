@@ -1,3 +1,7 @@
+# End Result
+
+Click here to view app live [Homely - Food Order App](https://taiwojazz-homely.netlify.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

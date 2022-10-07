@@ -29,11 +29,11 @@ const GetOurMobile = () => {
             great food, whether you're at home or on the go.
           </p>
           <img
-            className='inline-block mr-4 md:mr-10 w-32 md:w-48'
+            className='inline-block mr-4 md:mr-10 w-32 sm:w-48'
             src={playstore}
             alt=''
           />
-          <img className='inline-block w-28 md:w-40' src={applestore} alt='' />
+          <img className='inline-block w-28 sm:w-40' src={applestore} alt='' />
         </div>
       </div>
     </div>

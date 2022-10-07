@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      screens: {
+        sm: '480px'
+      },
       colors: {
         brandColor: 'rgba(255, 77, 0, 1)',
         background: 'rgba(255, 77, 0, 0.6)',
@@ -16,10 +19,11 @@ module.exports = {
         logoGradient2: 'rgba(37, 73, 211, 1)',
         logoGradient3: 'rgba(255, 81, 6, 1)',
         logoGradient4: 'rgba(252, 80, 5, 1)',
+        backDrop: 'rgba(0, 0, 0, 0.85)',
       },
       fontFamily: {
         body: 'Space Grotesk, sans-serif',
-        logo: 'Oleo Script, cursive',
+        logo: 'Oleo Script, cursive'
       }
     }
   },
