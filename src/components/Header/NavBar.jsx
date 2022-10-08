@@ -7,7 +7,7 @@ const NavBar = (props) => {
   const [active, setActive] = useState(false);
 
   const showMenu = () => {
-    setActive(!active);
+    setActive(prevActive => !prevActive);
   };
 
   return (
