@@ -4,9 +4,6 @@ import Stats from './Stats';
 import Button from '../UI/Button';
 import heroImage from '../../assets/hero-image.png';
 
-import { ToastContainer, Zoom } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 const Hero = () => {
   return (
     <Fragment>
@@ -22,19 +19,6 @@ const Hero = () => {
             Enjoy <span className='text-brandColor'>home made meals</span> far
             away from home
           </h1>
-          <ToastContainer
-            style={{ fontFamily: 'body' }}
-            position='top-center'
-            autoClose={1000}
-            hideProgressBar={false}
-            newestOnTop
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss={false}
-            draggable
-            pauseOnHover
-            transition={Zoom}
-          />
           <p className='text-2xl mt-2 mb-8 max-w-md mx-auto lg:mx-0'>
             Helping you enjoy confortable and health food anywhere and anytime
             on the go

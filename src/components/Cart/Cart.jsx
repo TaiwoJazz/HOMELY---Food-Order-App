@@ -3,41 +3,18 @@ import Modal from '../UI/Modal';
 import CartContext from '../../Store/cart-context';
 import CartItem from './CartItem';
 
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 const Cart = props => {
   const cartCtx = useContext(CartContext);
 
   const totalAmount = `₦${cartCtx.totalAmount.toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
 
-  const CartItemRemoveHandler = (id, title) => {
-    cartCtx.removeItem(id);
-
-    toast.error(`${title} Removed`, {
-      position: 'top-center',
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined
-    });
+  const CartItemRemoveHandler = (item) => {
+    cartCtx.removeItem(item);
   };
 
-  const CartItemAddHandler = (item, title) => {
+  const CartItemAddHandler = (item,) => {
     cartCtx.addItem({ ...item, amount: 1 });
-
-    toast.success(`${title} Added`, {
-      position: 'top-center',
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined
-    });
   };
 
   const handleMutipleClick = () => {
@@ -54,8 +31,8 @@ const Cart = props => {
           amount={item.amount}
           price={item.price}
           image={item.image}
-          onRemove={CartItemRemoveHandler.bind(null, item.id, item.title)}
-          onAdd={CartItemAddHandler.bind(null, item, item.title)}
+          onRemove={CartItemRemoveHandler.bind(null, item)}
+          onAdd={CartItemAddHandler.bind(null, item)}
         />
       ))}
     </ul>

@@ -2,9 +2,6 @@ import React, { useContext } from 'react';
 import CartContext from '../../../Store/cart-context';
 import DishItemForm from './DishItemForm';
 
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 const DishItems = props => {
   const cartCtx = useContext(CartContext);
 
@@ -17,18 +14,6 @@ const DishItems = props => {
       amount: amount,
       price: props.price,
       image: props.image
-    });
-  };
-
-  const notify = () => {
-    toast.success(`${props.title} Added to Cart`, {
-      position: 'top-center',
-      autoClose: 700,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined
     });
   };
 
@@ -45,7 +30,7 @@ const DishItems = props => {
         </h4>
         <span className='flex items-center justify-between my-auto'>
           <p className='text-xl inline-block font-semibold'>{price}</p>
-          <DishItemForm onAddToCart={addToCartHandler} handleNotify={notify} />
+          <DishItemForm onAddToCart={addToCartHandler}  />
         </span>
       </div>
     </div>

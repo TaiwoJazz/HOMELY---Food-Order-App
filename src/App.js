@@ -13,6 +13,7 @@ import Cart from './components/Cart/Cart';
 import CartProvider from './Store/CartProvider';
 import CartContext from './Store/cart-context';
 import swal from 'sweetalert';
+import Tostify from './components/UI/Tostify';
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -40,6 +41,7 @@ function App() {
   return (
     <CartProvider>
       <div className='font-body scroll-smooth'>
+      <Tostify />
         {cartIsShown && (
           <Cart onCloseCart={closeCartHandler} onOrder={handleOrder} />
         )}

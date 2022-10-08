@@ -1,8 +1,11 @@
 import React, { useReducer } from 'react';
 import CartContext from './cart-context';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const defaultCartState = {
-  items: [],
+  items: localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [],
   totalAmount: 0
 };
 
@@ -29,6 +32,8 @@ const cartReducer = (state, action) => {
       updatedItems = state.items.concat(action.item);
     }
 
+    localStorage.setItem('cartItems', JSON.stringify(updatedItems))
+
     return {
       items: updatedItems,
       totalAmount: updatedTotalAmount
@@ -53,6 +58,8 @@ const cartReducer = (state, action) => {
       updatedItems[existingCartItemIndex] = updatedItem;
     }
 
+    localStorage.setItem('cartItems', JSON.stringify(updatedItems))
+
     return {
       items: updatedItems,
       totalAmount: updatedTotalAmount
@@ -60,6 +67,7 @@ const cartReducer = (state, action) => {
   }
 
   if (action.type === 'CLEAR') {
+    localStorage.setItem('cartItems', JSON.stringify([]))
     return defaultCartState;
   }
 
@@ -74,10 +82,30 @@ const CartProvider = props => {
 
   const addItemToCartHandler = item => {
     dispatchCartAction({ type: 'ADD', item: item });
+
+    toast.success(`${item.title} Added`, {
+      position: 'top-center',
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined
+    });
   };
 
-  const removeItemFromCartHandler = id => {
-    dispatchCartAction({ type: 'REMOVE', id: id });
+  const removeItemFromCartHandler = item => {
+    dispatchCartAction({ type: 'REMOVE', id: item.id });
+
+    toast.error(`${item.title} Removed`, {
+      position: 'top-center',
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined
+    });
   };
 
   const clearItemsFromCartHandler = () => {
