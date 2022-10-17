@@ -1,9 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState} from 'react';
 import Modal from '../UI/Modal';
 import CartContext from '../../Store/cart-context';
 import CartItem from './CartItem';
+import Checkout from './Cheakout/Checkout';
 
 const Cart = props => {
+  const [isCheckingOut, setIsCheckingOut] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [didSubmit, setDidSubmit] = useState(false);
+  
   const cartCtx = useContext(CartContext);
 
   const totalAmount = `₦${cartCtx.totalAmount.toFixed(2)}`;
@@ -17,13 +22,29 @@ const Cart = props => {
     cartCtx.addItem({ ...item, amount: 1 });
   };
 
-  const handleMutipleClick = () => {
-    props.onOrder();
-    cartCtx.clearItems();
+  const orderHandler = () => {
+    setIsCheckingOut(true);
   };
 
+  const submitOrderHandler = async userData => {
+    setIsSubmitting(true);
+    await fetch(
+      'https://food-order-app-d4ff6-default-rtdb.firebaseio.com/orders.json',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          user: userData,
+          orderedItem: cartCtx.items
+        })
+      }
+    );
+    setIsSubmitting(false);
+    setDidSubmit(true)
+    cartCtx.clearItems()
+  }
+
   const cartItems = (
-    <ul className='m-0 p-4 max-h-[25rem] overflow-auto'>
+    <ul className='m-0 p-4 max-h-[20rem] md:max-h-[22rem] overflow-auto'>
       {cartCtx.items.map(item => (
         <CartItem
           key={item.id}
@@ -38,6 +59,25 @@ const Cart = props => {
     </ul>
   );
 
+  const cartActionButtons = <div className='flex justify-center sm:justify-end'>
+  <button
+    onClick={props.onCloseCart}
+    className='py-1 px-6 mr-6 w-auto font-semibold inline-block border-2 border-brandColor rounded-xl text-brandColor cursor-pointer hover:bg-brandColor hover:text-white transition-all duration-300 ease-in-out'
+  >
+    Close
+  </button>
+  {hasItems && (
+    <button
+      onClick={orderHandler}
+      className='py-1.5 px-6 w-auto font-semibold inline-block bg-brandColor rounded-xl text-white cursor-pointer hover:opacity-80'
+    >
+      Order
+    </button>
+  )}
+</div>
+
+const isSubmittingModalContent = <p className='text-center'>Sending order data...</p>;
+
   return (
     <Modal onCloseCart={props.onCloseCart}>
       {cartItems}
@@ -45,22 +85,10 @@ const Cart = props => {
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
-      <div className='flex justify-center sm:justify-end'>
-        <button
-          onClick={props.onCloseCart}
-          className='py-1 px-6 mr-6 w-auto font-semibold inline-block border-2 border-brandColor rounded-xl text-brandColor cursor-pointer hover:bg-brandColor hover:text-white transition-all duration-300 ease-in-out'
-        >
-          Close
-        </button>
-        {hasItems && (
-          <button
-            onClick={handleMutipleClick}
-            className='py-1.5 px-6 w-auto font-semibold inline-block bg-brandColor rounded-xl text-white cursor-pointer hover:opacity-80'
-          >
-            Order
-          </button>
-        )}
-      </div>
+      {isCheckingOut && <Checkout onConfirm={submitOrderHandler} onCancel={props.onCloseCart} />}
+      {!isCheckingOut && cartActionButtons}
+      {isSubmitting && isSubmittingModalContent}
+      {didSubmit && props.onOrder()}
     </Modal>
   );
 };

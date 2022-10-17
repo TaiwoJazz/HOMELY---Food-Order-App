@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState} from 'react';
 
 import NavBar from './components/Header/NavBar';
 import Hero from './components/Hero/Hero';
@@ -11,13 +11,11 @@ import Footer from './components/Footer/Footer';
 import Cart from './components/Cart/Cart';
 
 import CartProvider from './Store/CartProvider';
-import CartContext from './Store/cart-context';
 import swal from 'sweetalert';
 import Tostify from './components/UI/Tostify';
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
-  const cartCtx = useContext(CartContext);
   
 
   const openCartHandler = () => {
@@ -30,10 +28,9 @@ function App() {
 
   const handleOrder = () => {
     setCartIsShown(false);
-    cartCtx.clearItems()
     swal(
       'Successful!',
-      'Your order was placed, delivery in 2 hours',
+      'Your order was placed, you will be contact by a delivery agent soon!',
       'success'
     );
   };
