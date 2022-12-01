@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
-import {Link} from 'react-scroll'
+import { Link } from 'react-scroll';
 import NavCartButton from './NavCartButton';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 
-export const PC = props => {
+export const PC = (props) => {
   return (
     <Fragment>
       <div className='md:hidden flex gap-2 items-center cursor-pointer'>
@@ -19,18 +19,20 @@ export const PC = props => {
           ['Why Choose Us', 'why'],
           ['Our Dishes', 'dishes'],
           ['About Us', 'about'],
-          ['Testimonials', "testimonials"]
+          ['Testimonials', 'testimonials']
         ].map(([title, url]) => (
-          <Link key={url} to={url} spy={true} smooth={true} offset={-100} duration={1000}>
-            <a
-              className='relative block duration-500 after:absolute after:content-[""] after:w-full after:h-0.5 after:top-full after:left-0 after:bg-brandColor after:transition after:duration-500 after:scale-0 after:origin-right hover:after:origin-left after:hover:scale-100 hover:text-brandColor'
-              href='/'
-            >
-              {title}
-            </a>
+          <Link
+            key={url}
+            to={url}
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={1000}
+            className='relative block duration-500 after:absolute after:content-[""] after:w-full after:h-0.5 after:top-full after:left-0 after:bg-brandColor after:transition after:duration-500 after:scale-0 after:origin-right hover:after:origin-left after:hover:scale-100 hover:text-brandColor'>
+            {title}
           </Link>
         ))}
-        <NavCartButton onOpenCart={props.onOpenCart}/>
+        <NavCartButton onOpenCart={props.onOpenCart} />
       </ul>
     </Fragment>
   );

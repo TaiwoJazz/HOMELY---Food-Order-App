@@ -54,13 +54,15 @@ const AvailableMeals = () => {
 
   useEffect(() => {
     const fetchMeals = async () => {
-      setIsLoading(true)
+      setIsLoading(true);
       const response = await fetch(
         'https://food-order-app-d4ff6-default-rtdb.firebaseio.com/availableMeals.json'
       );
 
       if (!response.ok) {
-        throw new Error('Something went wrong!');
+        throw new Error(
+          'Something went wrong. Could not fetch available meal!'
+        );
       }
 
       const responseData = await response.json();
@@ -76,19 +78,17 @@ const AvailableMeals = () => {
         });
       }
 
-      setMeals(loadedMeals)
-      setIsLoading(false)
-
+      setMeals(loadedMeals);
+      setIsLoading(false);
     };
 
-    fetchMeals().catch(error => {
-      setIsLoading(false)
-      setHttpError(error.message)
-    })
-
+    fetchMeals().catch((error) => {
+      setIsLoading(false);
+      setHttpError(error.message);
+    });
   }, []);
 
-  const mealsList = meals.map(dishes => (
+  const mealsList = meals.map((dishes) => (
     <DishItems
       id={dishes.id}
       key={dishes.id}
@@ -100,7 +100,7 @@ const AvailableMeals = () => {
 
   if (isLoading) {
     return (
-      <section>
+      <section className='flex items-center justify-center text-2xl'>
         <p>Fetching Data, please wait...</p>
       </section>
     );
@@ -108,7 +108,7 @@ const AvailableMeals = () => {
 
   if (httpError) {
     return (
-      <section>
+      <section className='flex items-center justify-center text-2xl max-w-[22rem] text-center mx-auto'>
         <p>{httpError}</p>
       </section>
     );
